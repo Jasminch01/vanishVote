@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 const app = express();
-dotenv.config();
+dotenv.config({ path: path.join(process.cwd(), ".env") });
 const port = 5000;
 
 app.get("/", (req, res) => {
